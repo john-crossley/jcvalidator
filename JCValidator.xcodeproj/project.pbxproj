@@ -10,6 +10,7 @@
 		9A1D77E1202F309900EB054E /* MaxRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D77E0202F309900EB054E /* MaxRule.swift */; };
 		9A1D77E3202F30AC00EB054E /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D77E2202F30AC00EB054E /* Rule.swift */; };
 		9A1D77E5202F30F800EB054E /* MinRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D77E4202F30F800EB054E /* MinRule.swift */; };
+		9AB69058202F4DDA004FDE4C /* EmailRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB69057202F4DDA004FDE4C /* EmailRule.swift */; };
 		9AE2E6CF2026554C00861D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE2E6CE2026554C00861D5F /* AppDelegate.swift */; };
 		9AE2E6D12026554C00861D5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE2E6D02026554C00861D5F /* ViewController.swift */; };
 		9AE2E6D42026554C00861D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE2E6D22026554C00861D5F /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		9A1D77E0202F309900EB054E /* MaxRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxRule.swift; sourceTree = "<group>"; };
 		9A1D77E2202F30AC00EB054E /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		9A1D77E4202F30F800EB054E /* MinRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinRule.swift; sourceTree = "<group>"; };
+		9AB69057202F4DDA004FDE4C /* EmailRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRule.swift; sourceTree = "<group>"; };
 		9AE2E6CB2026554C00861D5F /* JCValidator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCValidator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE2E6CE2026554C00861D5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AE2E6D02026554C00861D5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 				9A1D77E0202F309900EB054E /* MaxRule.swift */,
 				9A1D77E2202F30AC00EB054E /* Rule.swift */,
 				9A1D77E4202F30F800EB054E /* MinRule.swift */,
+				9AB69057202F4DDA004FDE4C /* EmailRule.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				9AE2E6E12026555A00861D5F /* JCValidator.swift in Sources */,
 				9A1D77E1202F309900EB054E /* MaxRule.swift in Sources */,
 				9A1D77E5202F30F800EB054E /* MinRule.swift in Sources */,
+				9AB69058202F4DDA004FDE4C /* EmailRule.swift in Sources */,
 				9AE2E6CF2026554C00861D5F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

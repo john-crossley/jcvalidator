@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         validator.delegate = self
         validator.bind(rules: [MinRule(min: 3), MaxRule(max: 100)], to: nameTextField)
+        validator.bind(rule: EmailRule(), to: emailTextField)
         validator.bind(rule: MinRule(min: 6), to: passwordTextField)
     }
 
