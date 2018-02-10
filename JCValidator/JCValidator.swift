@@ -29,6 +29,7 @@ protocol JCValidatorDelegate: class {
 }
 
 class JCValidator: NSObject {
+
     typealias RuleSet = [WeakRef<UITextField>: [Rule]]
     fileprivate var rules = RuleSet()
 
@@ -36,12 +37,14 @@ class JCValidator: NSObject {
 
     enum State {
         case valid
-        case errors([String])
+        case error([String])
     }
 
-    //    static let shared = JCValidator()
-
     func bind(rules: [Rule], to textField: UITextField) {
+        if !self.rules(for: textField).isEmpty {
+            return
+        }
+
         self.rules.updateValue(rules, forKey: WeakRef(value: textField))
         textField.delegate = self
     }
@@ -60,19 +63,33 @@ class JCValidator: NSObject {
 
         return rules?.value ?? []
     }
-
-    func isValid(_ text: String?) -> Bool {
-        return true
-    }
 }
 
 extension JCValidator: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let rules = self.rules(for: textField)
-        let results = rules.map { rule in return rule.validate(textField.text) }
+        let results = rules.map { rule -> Result in
+            return rule.validate(textField.text)
+        }
 
-        print(results)
+        let failedValidation = results.contains { result -> Bool in
+            return !result.isValid
+        }
 
-        return true
+        if !failedValidation {
+            delegate?.didValidate(textField: textField, state: .valid)
+            return true
+        }
+
+        let errors = results.flatMap { result -> String? in
+            if !result.isValid {
+                return result.message
+            }
+            return nil
+        }
+
+        delegate?.didValidate(textField: textField, state: .error(errors))
+
+        return false
     }
 }

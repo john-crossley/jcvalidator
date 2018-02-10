@@ -8,7 +8,11 @@
 
 import Foundation
 
-protocol Rule: class {
-    func validate(_ text: String?) -> (isValid: Bool, message: String?)
+internal struct Result {
+    let isValid: Bool
+    let message: String
 }
 
+protocol Rule: class {
+    func validate(_ text: String?) -> Result
+}

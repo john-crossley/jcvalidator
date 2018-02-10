@@ -24,13 +24,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         validator.delegate = self
-
-        validator.bind(rules: [MinRule(min: 0), MaxRule(max: 100)], to: nameTextField)
+        validator.bind(rules: [MinRule(min: 3), MaxRule(max: 100)], to: nameTextField)
         validator.bind(rule: MinRule(min: 6), to: passwordTextField)
-
-//        textFields.forEach { $0.delegate = self }
     }
 
 }
@@ -40,8 +36,41 @@ extension ViewController: JCValidatorDelegate {
         switch state {
         case .valid:
             print("\(String(describing: textField.text)) is valid")
-        case .errors(_):
-            print("\(String(describing: textField.text)) is not valid")
+            updateLabel(for: textField)
+        case .error(let message):
+
+            updateErrorLabel(for: textField, with: message.first)
+
+        }
+    }
+
+    fileprivate func updateErrorLabel(for textField: UITextField, with message: String?) {
+        switch textField {
+        case nameTextField:
+            nameLabel.textColor = .red
+            nameLabel.text = message
+        case emailTextField:
+            emailLabel.textColor = .red
+            emailLabel.text = message
+        case passwordTextField:
+            passwordLabel.textColor = .red
+            passwordLabel.text = message
+        default: break
+        }
+    }
+
+    fileprivate func updateLabel(for textField: UITextField) {
+        switch textField {
+        case nameTextField:
+            nameLabel.textColor = .black
+            nameLabel.text = "Full name"
+        case emailTextField:
+            emailLabel.textColor = .black
+            emailLabel.text = "Email address"
+        case passwordTextField:
+            passwordLabel.textColor = .black
+            passwordLabel.text = "Password"
+        default: break
         }
     }
 }

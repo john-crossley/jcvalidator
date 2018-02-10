@@ -23,12 +23,15 @@ class MinRule: Rule {
         self.name = "field"
     }
 
-    func validate(_ text: String?) -> (isValid: Bool, message: String?) {
-        guard let text = text else { return (false, "You must enter a value") }
+    func validate(_ text: String?) -> Result {
+        guard let text = text else {
+            return Result(isValid: false, message: "You must enter a value")
+        }
 
         if text.count < min {
-            return (false, "The \(name) field is too short, min is \(min)")
+            return Result(isValid: false, message: "The \(name) field is too short, min is \(min)")
         }
-        return (true, nil)
+
+        return Result(isValid: true, message: "")
     }
 }

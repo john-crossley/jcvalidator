@@ -23,13 +23,16 @@ class MaxRule: Rule {
         self.name = "field"
     }
 
-    func validate(_ text: String?) -> (isValid: Bool, message: String?) {
+    func validate(_ text: String?) -> Result {
 
-        guard let text = text else { return (false, "You must enter a value") }
+        guard let text = text else {
+            return Result(isValid: false, message: "You must enter a value")
+        }
 
         if text.count > max {
-            return (false, "The \(name) field is too long, max is \(max)")
+            return Result(isValid: false, message: "The \(name) field is too long, max is \(max)")
         }
-        return (true, nil)
+
+        return Result(isValid: true, message: "")
     }
 }
