@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A1D77E1202F309900EB054E /* MaxRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D77E0202F309900EB054E /* MaxRule.swift */; };
+		9A1D77E3202F30AC00EB054E /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D77E2202F30AC00EB054E /* Rule.swift */; };
+		9A1D77E5202F30F800EB054E /* MinRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D77E4202F30F800EB054E /* MinRule.swift */; };
 		9AE2E6CF2026554C00861D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE2E6CE2026554C00861D5F /* AppDelegate.swift */; };
 		9AE2E6D12026554C00861D5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE2E6D02026554C00861D5F /* ViewController.swift */; };
 		9AE2E6D42026554C00861D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE2E6D22026554C00861D5F /* Main.storyboard */; };
 		9AE2E6D62026554C00861D5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE2E6D52026554C00861D5F /* Assets.xcassets */; };
 		9AE2E6D92026554C00861D5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE2E6D72026554C00861D5F /* LaunchScreen.storyboard */; };
+		9AE2E6E12026555A00861D5F /* JCValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE2E6E02026555A00861D5F /* JCValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A1D77E0202F309900EB054E /* MaxRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxRule.swift; sourceTree = "<group>"; };
+		9A1D77E2202F30AC00EB054E /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		9A1D77E4202F30F800EB054E /* MinRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinRule.swift; sourceTree = "<group>"; };
 		9AE2E6CB2026554C00861D5F /* JCValidator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCValidator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE2E6CE2026554C00861D5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AE2E6D02026554C00861D5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,7 @@
 		9AE2E6D52026554C00861D5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AE2E6D82026554C00861D5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AE2E6DA2026554C00861D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AE2E6E02026555A00861D5F /* JCValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A1D77DF202F308D00EB054E /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				9A1D77E0202F309900EB054E /* MaxRule.swift */,
+				9A1D77E2202F30AC00EB054E /* Rule.swift */,
+				9A1D77E4202F30F800EB054E /* MinRule.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
 		9AE2E6C22026554C00861D5F = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +72,14 @@
 		9AE2E6CD2026554C00861D5F /* JCValidator */ = {
 			isa = PBXGroup;
 			children = (
+				9A1D77DF202F308D00EB054E /* Rules */,
 				9AE2E6CE2026554C00861D5F /* AppDelegate.swift */,
 				9AE2E6D02026554C00861D5F /* ViewController.swift */,
 				9AE2E6D22026554C00861D5F /* Main.storyboard */,
 				9AE2E6D52026554C00861D5F /* Assets.xcassets */,
 				9AE2E6D72026554C00861D5F /* LaunchScreen.storyboard */,
 				9AE2E6DA2026554C00861D5F /* Info.plist */,
+				9AE2E6E02026555A00861D5F /* JCValidator.swift */,
 			);
 			path = JCValidator;
 			sourceTree = "<group>";
@@ -137,6 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE2E6D12026554C00861D5F /* ViewController.swift in Sources */,
+				9A1D77E3202F30AC00EB054E /* Rule.swift in Sources */,
+				9AE2E6E12026555A00861D5F /* JCValidator.swift in Sources */,
+				9A1D77E1202F309900EB054E /* MaxRule.swift in Sources */,
+				9A1D77E5202F30F800EB054E /* MinRule.swift in Sources */,
 				9AE2E6CF2026554C00861D5F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8J3TTY737M;
 				INFOPLIST_FILE = JCValidator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jonnothebonno.JCValidator;
@@ -289,6 +314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8J3TTY737M;
 				INFOPLIST_FILE = JCValidator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jonnothebonno.JCValidator;
