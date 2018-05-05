@@ -35,13 +35,8 @@ class ViewController: UIViewController {
 extension ViewController: JCValidatorDelegate {
     func didValidate(textField: UITextField, state: JCValidator.State) {
         switch state {
-        case .valid:
-            print("\(String(describing: textField.text)) is valid")
-            updateLabel(for: textField)
-        case .error(let message):
-
-            updateErrorLabel(for: textField, with: message.first)
-
+        case .valid: updateLabel(for: textField)
+        case .error(let message): updateErrorLabel(for: textField, with: message.first)
         }
     }
 
@@ -75,17 +70,3 @@ extension ViewController: JCValidatorDelegate {
         }
     }
 }
-
-//extension ViewController: UITextFieldDelegate {
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        switch textField {
-//        case nameTextField: print("nameTextField isValid=\(nameTextField.isValid())")
-//        case emailTextField: print("emailTextField isValid=\(emailTextField.isValid())")
-//        case passwordTextField: print("passwordTextField isValid=\(passwordTextField.isValid())")
-//        default: break
-//        }
-//
-//        return true
-//    }
-//}
-
